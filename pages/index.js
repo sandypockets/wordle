@@ -73,7 +73,7 @@ export default function Home() {
 
   return (
     <main className="p-4 overflow-hidden md:overflow-auto">
-      <h1 className="text-3xl mb-4">Wordle</h1>
+      <h1 className="text-3xl mb-4 flex justify-center md:justify-start">wordle</h1>
       {challengeWord && (
         <>
           <WordGrid
