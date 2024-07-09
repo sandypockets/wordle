@@ -5,7 +5,7 @@ import Keyboard from "@/components/Keyboard/Keyboard";
 export default function Home() {
   const [guesses, setGuesses] = useState([]);
   const [currentGuess, setCurrentGuess] = useState("");
-  const [challengeWord, setChallengeWord] = useState("HELLO");
+  const [challengeWord, setChallengeWord] = useState("");
   const [letterStatuses, setLetterStatuses] = useState({});
 
   const onKeyPress = (key) => {
@@ -47,6 +47,14 @@ export default function Home() {
     });
     setLetterStatuses(newStatuses);
   };
+
+  useEffect(() => {
+    fetch("/api/words")
+      .then((res) => res.json())
+      .then((data) => {
+        setChallengeWord(data.word);
+      });
+  }, []);
 
   useEffect(() => {
     const handleKeydown = (event) => {
