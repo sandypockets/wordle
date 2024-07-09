@@ -7,7 +7,7 @@ export default function KeyButton({
   return (
     <button
       key={keyLabel}
-      className={`border border-gray-300 h-10 w-7 m-0.5 rounded-md text-sm ${getButtonClass(keyLabel)}`}
+      className={`border border-gray-300 h-11 w-8 my-0.5 mx-[0.13rem] rounded-md text-sm ${getButtonClass(keyLabel)}`}
       onClick={() => {
         if (letterStatuses[keyLabel] !== "absent") onKeyPress(keyLabel);
       }}
