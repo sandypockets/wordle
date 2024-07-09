@@ -13,14 +13,12 @@ export default function WordGrid({ challengeWord, guesses, currentGuess }) {
             guess={guess}
             getLetterStatusClass={getLetterStatusClass}
             challengeWord={challengeWord}
+            isLastRow={rowIndex === guesses.length - 1}
           />
         </div>
       ))}
       {guesses.length < 5 && (
-        <CurrentGuessRow
-          gridWidth={gridWidth}
-          currentGuess={currentGuess}
-        />
+        <CurrentGuessRow gridWidth={gridWidth} currentGuess={currentGuess} />
       )}
     </div>
   );
