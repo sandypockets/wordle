@@ -1,6 +1,5 @@
 import CurrentGuessRow from "@/components/WordGrid/CurrentGuessRow";
 import PreviousGuessRows from "@/components/WordGrid/PreviousGuessRows";
-import { getLetterStatusClass } from "@/helpers/classHelpers";
 
 export default function WordGrid({ challengeWord, guesses, currentGuess }) {
   const gridWidth = challengeWord.length;
@@ -11,7 +10,6 @@ export default function WordGrid({ challengeWord, guesses, currentGuess }) {
         <div key={rowIndex}>
           <PreviousGuessRows
             guess={guess}
-            getLetterStatusClass={getLetterStatusClass}
             challengeWord={challengeWord}
             isLastRow={rowIndex === guesses.length - 1}
           />

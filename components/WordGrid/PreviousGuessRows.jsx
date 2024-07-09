@@ -1,12 +1,9 @@
 import { useState, useEffect } from "react";
+import { getLetterBackgroundColor } from "@/helpers/classHelpers";
 
-export default function PreviousGuessRows({
-  guess,
-  getLetterStatusClass,
-  challengeWord,
-  isLastRow,
-}) {
+export default function PreviousGuessRows({ guess, challengeWord, isLastRow }) {
   const [triggerCardFlip, setTriggerCardFlip] = useState(false);
+  const letterClasses = getLetterBackgroundColor(guess, challengeWord);
 
   useEffect(() => {
     if (isLastRow) {
@@ -28,7 +25,7 @@ export default function PreviousGuessRows({
               {letter}
             </div>
             <div
-              className={`flip-back absolute inset-0 border border-gray-500 flex items-center justify-center ${getLetterStatusClass(letter, index, challengeWord)}`}
+              className={`flip-back absolute inset-0 border border-gray-500 flex items-center justify-center ${letterClasses[index]}`}
             >
               {letter}
             </div>
