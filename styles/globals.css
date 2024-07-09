@@ -26,6 +26,12 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+
+main {
+    overflow: hidden; /* Prevent scrolling */
+    -webkit-overflow-scrolling: auto; /* Prevent iOS bounce effect */
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
