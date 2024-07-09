@@ -9,8 +9,8 @@ export default function Home() {
   const [letterStatuses, setLetterStatuses] = useState({});
 
   const onKeyPress = (key) => {
-    if (navigator.vibrate) {
-      navigator.vibrate(50);
+    if (window?.navigator?.vibrate) {
+      window.navigator.vibrate(50);
     }
 
     if (key === "ENTER" || key === "Enter ⏎") {
