@@ -27,7 +27,7 @@ body {
 }
 
 
-main {
+body {
     overflow: hidden; /* Prevent scrolling */
     -webkit-overflow-scrolling: auto; /* Prevent iOS bounce effect */
 }

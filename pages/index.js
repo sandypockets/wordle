@@ -72,7 +72,7 @@ export default function Home() {
   }, [currentGuess, guesses, challengeWord, letterStatuses]);
 
   return (
-    <main className="p-4 h-screen overflow-hidden md:overflow-auto">
+    <main className="p-4 overflow-hidden md:overflow-auto">
       <h1 className="text-3xl mb-4">Wordle</h1>
       {challengeWord && (
         <>
