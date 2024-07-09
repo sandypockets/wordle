@@ -74,12 +74,16 @@ export default function Home() {
   return (
     <main className="p-4 h-screen">
       <h1 className="text-3xl mb-4">Wordle</h1>
-      <WordGrid
-        challengeWord={challengeWord}
-        guesses={guesses}
-        currentGuess={currentGuess}
-      />
-      <Keyboard onKeyPress={onKeyPress} letterStatuses={letterStatuses} />
+      {challengeWord && (
+        <>
+          <WordGrid
+            challengeWord={challengeWord}
+            guesses={guesses}
+            currentGuess={currentGuess}
+          />
+          <Keyboard onKeyPress={onKeyPress} letterStatuses={letterStatuses} />
+        </>
+      )}
     </main>
   );
 }
