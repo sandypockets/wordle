@@ -52,7 +52,6 @@ export default function Home() {
     fetch("/api/words")
       .then((res) => res.json())
       .then((data) => {
-        console.log("ChallengeWord: ", data.word);
         setChallengeWord(data.word);
       });
   }, []);
