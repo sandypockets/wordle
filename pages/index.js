@@ -9,6 +9,10 @@ export default function Home() {
   const [letterStatuses, setLetterStatuses] = useState({});
 
   const onKeyPress = (key) => {
+    if (navigator.vibrate) {
+      navigator.vibrate(50);
+    }
+
     if (key === "ENTER" || key === "Enter ⏎") {
       if (currentGuess.length === challengeWord.length) {
         updateLetterStatuses(currentGuess);
