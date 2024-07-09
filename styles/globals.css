@@ -29,7 +29,7 @@ body {
 
 body {
     overflow: hidden; /* Prevent scrolling */
-    -webkit-overflow-scrolling: auto; /* Prevent iOS bounce effect */
+    /*-webkit-overflow-scrolling: auto; !* Prevent iOS bounce effect *!*/
 }
 
 @layer utilities {
