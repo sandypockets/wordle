@@ -64,7 +64,7 @@ export default function Home() {
   }, [currentGuess, guesses, challengeWord, letterStatuses]);
 
   return (
-    <main className="p-4">
+    <main className="p-4 h-screen">
       <h1 className="text-3xl mb-4">Wordle</h1>
       <WordGrid
         challengeWord={challengeWord}
