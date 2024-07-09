@@ -5,15 +5,9 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  safelist: [
-    'bg-green-500',
-    'bg-yellow-500',
-    'bg-gray-500',
-    'w-20'
-  ],
+  safelist: ["bg-green-500", "bg-yellow-500", "bg-gray-500", "w-20"],
   theme: {
-    extend: {
-    },
+    extend: {},
   },
   plugins: [],
 };

@@ -8,7 +8,10 @@ export default function Keyboard({ onKeyPress, letterStatuses }) {
   ];
 
   const getButtonClass = (key) => {
-    if (letterStatuses[key] === "correct" || letterStatuses[key] === "present") {
+    if (
+      letterStatuses[key] === "correct" ||
+      letterStatuses[key] === "present"
+    ) {
       return "bg-green-500 text-black";
     } else if (letterStatuses[key] === "absent") {
       return "bg-gray-500 cursor-not-allowed";
@@ -22,7 +25,13 @@ export default function Keyboard({ onKeyPress, letterStatuses }) {
       {rows.map((row, rowIndex) => (
         <div key={rowIndex} className="flex justify-center mb-2">
           {row.map((keyLabel) => (
-            <KeyButton key={keyLabel} keyLabel={keyLabel} onKeyPress={onKeyPress} letterStatuses={letterStatuses} getButtonClass={getButtonClass} />
+            <KeyButton
+              key={keyLabel}
+              keyLabel={keyLabel}
+              onKeyPress={onKeyPress}
+              letterStatuses={letterStatuses}
+              getButtonClass={getButtonClass}
+            />
           ))}
         </div>
       ))}
@@ -33,5 +42,5 @@ export default function Keyboard({ onKeyPress, letterStatuses }) {
         ENTER ⏎
       </button>
     </div>
-  )
+  );
 }
