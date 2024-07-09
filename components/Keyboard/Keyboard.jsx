@@ -1,3 +1,5 @@
+import KeyButton from "@/components/Keyboard/KeyButton";
+
 export default function Keyboard({ onKeyPress, letterStatuses }) {
   const rows = [
     ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
@@ -19,16 +21,8 @@ export default function Keyboard({ onKeyPress, letterStatuses }) {
     <div className="flex flex-col items-center">
       {rows.map((row, rowIndex) => (
         <div key={rowIndex} className="flex justify-center mb-2">
-          {row.map((key) => (
-            <button
-              key={key}
-              className={`border border-gray-300 h-10 w-7 m-0.5 rounded-md text-sm ${getButtonClass(key)}`}
-              onClick={() => {
-                if (letterStatuses[key] !== 'absent') onKeyPress(key)
-              }}
-            >
-              {key}
-            </button>
+          {row.map((keyLabel) => (
+            <KeyButton key={keyLabel} keyLabel={keyLabel} onKeyPress={onKeyPress} letterStatuses={letterStatuses} getButtonClass={getButtonClass} />
           ))}
         </div>
       ))}
