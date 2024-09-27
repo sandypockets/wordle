@@ -2,6 +2,8 @@
 
 A simple Wordle clone. 
 
+![https://github.com/sandypockets/wordle/blob/main/docs/screenshot.png?raw=true](https://github.com/sandypockets/wordle/blob/main/docs/screenshot.png?raw=true)
+
 ## Tech stack
 - [Next.js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
